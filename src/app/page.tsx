@@ -2,7 +2,6 @@ import { Hero } from "@/components/Hero";
 import { Experience } from "@/components/Experience";
 import { AboutPrinciples } from "@/components/AboutPrinciples";
 import { Skills } from "@/components/Skills";
-import { Projects } from "@/components/Projects";
 
 export default function Home() {
   return (
@@ -22,11 +21,6 @@ export default function Home() {
         {/* Tech Stack / Skills under Hero (Compact) */}
         <div className="lg:col-span-12 lg:row-span-1 flex min-h-[100px]">
           <Skills />
-        </div>
-
-        {/* Featured Projects / Wins */}
-        <div className="lg:col-span-12 lg:row-span-1 flex min-h-[400px]">
-          <Projects />
         </div>
 
         {/* Bottom Full Width: Experience Timeline (Scrollable inside its card) */}
