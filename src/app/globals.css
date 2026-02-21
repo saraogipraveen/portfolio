@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-zinc-950: #09090b;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Hide scrollbar for bento grid */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    /* Pure black background, very modern */
+    @apply bg-black text-zinc-100 antialiased selection:bg-sky-500/20 selection:text-sky-300;
+  }
+
+  /* Focus rings */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-sky-500/50 ring-offset-2 ring-offset-black transition-shadow;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Modern Bento Card Style */
+  .bento-card {
+    @apply relative overflow-hidden rounded-[2rem] border border-white/[0.05] bg-white/[0.02] backdrop-blur-xl shadow-2xl transition-all duration-300 hover:border-sky-500/30 hover:bg-white/[0.04] hover:shadow-sky-500/10;
+  }
+
+  /* Subtle inner glow for Vercel/Apple aesthetic */
+  .bento-card::before {
+    content: '';
+    @apply absolute inset-0 rounded-[2rem] border border-white/10 opacity-0 transition-opacity duration-300 pointer-events-none;
+  }
+
+  .bento-card:hover::before {
+    @apply opacity-50;
+  }
+}
