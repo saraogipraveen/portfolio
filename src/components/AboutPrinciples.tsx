@@ -1,25 +1,23 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Zap, Clock, Code2 } from "lucide-react";
+import { Youtube, Users, Sparkles } from "lucide-react";
 
-const quickFacts = [
-    { label: "Experience", value: "8.5+ years" },
-    { label: "Current Base", value: "Glasgow, UK" },
-];
-
-const principles = [
+const additionalDetails = [
     {
-        icon: <Zap className="h-4 w-4 text-yellow-400" />,
-        title: "Fast, not rushed",
+        icon: <Youtube className="h-4 w-4 text-red-400" />,
+        title: "Content Creator",
+        desc: "500K+ views helping professionals navigate UK visas.",
     },
     {
-        icon: <Clock className="h-4 w-4 text-emerald-400" />,
-        title: "Deadline-first execution",
+        icon: <Users className="h-4 w-4 text-emerald-400" />,
+        title: "Community Builder",
+        desc: "Run a weekly badminton club across Glasgow.",
     },
     {
-        icon: <Code2 className="h-4 w-4 text-indigo-400" />,
-        title: "End-to-end ownership",
+        icon: <Sparkles className="h-4 w-4 text-indigo-400" />,
+        title: "AI Advocate & Mentor",
+        desc: "Top 10 AI tool user at JPMC Glasgow; former C/C++ tutor.",
     },
 ];
 
@@ -33,23 +31,19 @@ export function AboutPrinciples() {
         >
             <div>
                 <div className="flex items-center gap-3 mb-6">
-                    <div className="h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.8)] animate-pulse" />
+                    <div className="h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.8)]" />
                     <h2 className="font-[family-name:var(--font-fira-code)] text-xs uppercase tracking-widest text-zinc-400">
-                        Operation Status
+                        About Me
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-2 lg:grid-cols-1 xl:grid-cols-3 gap-3">
-                    {quickFacts.map((fact) => (
-                        <div key={fact.label} className="rounded-xl bg-white/[0.02] border border-white/5 p-4 flex flex-col justify-center">
-                            <p className="font-[family-name:var(--font-fira-code)] text-[10px] uppercase text-zinc-500 mb-1">
-                                {fact.label}
-                            </p>
-                            <p className="font-[family-name:var(--font-space-grotesk)] text-sm font-medium text-zinc-200">
-                                {fact.value}
-                            </p>
-                        </div>
-                    ))}
+                <div className="text-zinc-400 text-sm leading-relaxed font-[family-name:var(--font-space-grotesk)]">
+                    <p className="mb-3">
+                        Versatile frontend engineer with deep expertise in transforming legacy monoliths into ultra-fast, modern architectures using <span className="text-zinc-200 font-medium">TypeScript, React, and NextJS</span>.
+                    </p>
+                    <p>
+                        I excel at building complex, data-heavy enterprise applications, particularly within FinTech, Trading, and E-commerce domains.
+                    </p>
                 </div>
             </div>
 
@@ -57,20 +51,25 @@ export function AboutPrinciples() {
                 <div className="flex items-center gap-3 mb-6">
                     <div className="h-[1px] flex-1 bg-white/10" />
                     <h2 className="font-[family-name:var(--font-fira-code)] text-[10px] uppercase tracking-widest text-zinc-500">
-                        Protocols
+                        Beyond the Code
                     </h2>
                     <div className="h-[1px] flex-1 bg-white/10" />
                 </div>
 
                 <div className="space-y-3">
-                    {principles.map((item) => (
-                        <div key={item.title} className="group flex items-center gap-4 rounded-xl px-4 py-3 bg-white/[0.01] hover:bg-white/[0.04] transition-colors border border-transparent hover:border-white/10">
-                            <div className="shrink-0 p-2 rounded-lg bg-black box-border border border-white/10 shadow-inner">
+                    {additionalDetails.map((item) => (
+                        <div key={item.title} className="group flex items-start gap-4 rounded-xl px-4 py-3 bg-white/[0.01] hover:bg-white/[0.04] transition-colors border border-transparent hover:border-white/10">
+                            <div className="shrink-0 p-2 rounded-lg bg-black box-border border border-white/10 shadow-inner mt-0.5">
                                 {item.icon}
                             </div>
-                            <h3 className="font-[family-name:var(--font-space-grotesk)] text-sm font-medium text-zinc-300 group-hover:text-white transition-colors">
-                                {item.title}
-                            </h3>
+                            <div>
+                                <h3 className="font-[family-name:var(--font-space-grotesk)] text-sm font-medium text-zinc-300 group-hover:text-white transition-colors mb-0.5">
+                                    {item.title}
+                                </h3>
+                                <p className="font-[family-name:var(--font-space-grotesk)] text-xs text-zinc-500 leading-relaxed group-hover:text-zinc-400 transition-colors">
+                                    {item.desc}
+                                </p>
+                            </div>
                         </div>
                     ))}
                 </div>

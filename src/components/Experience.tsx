@@ -18,7 +18,7 @@ const experience = [
         ]
     },
     {
-        company: "TELUS Digital AI Data",
+        company: "TELUS Digital AI Data Solutions",
         role: "SDE2 Frontend",
         period: "Aug 2021 - May 2022",
         location: "Bangalore, IN",
@@ -107,8 +107,16 @@ export function Experience() {
                         Career Trajectory
                     </h2>
                 </div>
-                <div className="px-3 py-1 rounded-full bg-white/5 border border-white/10 font-[family-name:var(--font-fira-code)] text-[10px] text-zinc-500 hidden sm:block">
-                    {experience.length} ROLES DEPLOYED
+                <div className="flex gap-2 lg:gap-3 items-center">
+                    <div className="px-3 py-1 rounded-full bg-white/5 border border-white/10 font-[family-name:var(--font-fira-code)] text-[10px] text-zinc-500 whitespace-nowrap">
+                        GLASGOW, UK
+                    </div>
+                    <div className="px-3 py-1 rounded-full bg-white/5 border border-white/10 font-[family-name:var(--font-fira-code)] text-[10px] text-zinc-500 whitespace-nowrap">
+                        8.5+ YEARS EXP
+                    </div>
+                    <div className="px-3 py-1 rounded-full bg-white/5 border border-white/10 font-[family-name:var(--font-fira-code)] text-[10px] text-zinc-500 whitespace-nowrap">
+                        {experience.length} ROLES
+                    </div>
                 </div>
             </div>
 

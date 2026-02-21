@@ -21,7 +21,7 @@ export function Hero() {
 
                     <h1 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl xl:text-6xl font-semibold leading-[1.1] text-zinc-100 tracking-tight">
                         Engineering modern web <br className="hidden md:block" />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400">experiences at scale</span>.
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400">experiences at scale</span>
                     </h1>
 
                     <p className="mt-6 max-w-xl text-base leading-relaxed text-zinc-400/90 sm:text-lg">
