@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Mail, Briefcase, FileText, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 export function Hero() {
     return (
@@ -11,21 +12,31 @@ export function Hero() {
             transition={{ duration: 0.5 }}
             className="bento-card w-full h-full flex flex-col justify-center p-8 lg:p-12"
         >
-            <div className="flex-1 flex flex-col justify-center">
-                <p className="w-max mb-6 inline-flex rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-1 font-[family-name:var(--font-fira-code)] text-xs text-sky-400">
-                    <span className="mr-2 mt-1 h-1.5 w-1.5 rounded-full bg-sky-400 animate-pulse"></span>
-                    Senior UI Engineer
-                </p>
+            <div className="flex-1 flex flex-col md:flex-row gap-8 lg:gap-12 items-start md:items-center">
+                <div className="flex-1 flex flex-col justify-center">
+                    <p className="w-max mb-6 inline-flex rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-1 font-[family-name:var(--font-fira-code)] text-xs text-sky-400">
+                        <span className="mr-2 mt-1 h-1.5 w-1.5 rounded-full bg-sky-400 animate-pulse"></span>
+                        Senior UI Engineer
+                    </p>
 
-                <h1 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl xl:text-6xl font-semibold leading-[1.1] text-zinc-100 tracking-tight">
-                    Engineering modern web <br className="hidden md:block" />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400">experiences at scale</span>.
-                </h1>
+                    <h1 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl xl:text-6xl font-semibold leading-[1.1] text-zinc-100 tracking-tight">
+                        Engineering modern web <br className="hidden md:block" />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400">experiences at scale</span>.
+                    </h1>
 
-                <p className="mt-6 max-w-xl text-base leading-relaxed text-zinc-400/90 sm:text-lg">
-                    I'm a Senior Frontend Engineer specializing in building complex, data-heavy applications.
-                    From architectural modernizations to optimizing CI/CD pipelines, I focus on end-to-end ownership and high-performance delivery.
-                </p>
+                    <p className="mt-6 max-w-xl text-base leading-relaxed text-zinc-400/90 sm:text-lg">
+                        I'm a Senior Frontend Engineer specializing in building complex, data-heavy applications.
+                        From architectural modernizations to optimizing CI/CD pipelines, I focus on end-to-end ownership and high-performance delivery.
+                    </p>
+                </div>
+
+                <div className="shrink-0 relative w-32 h-32 md:w-40 md:h-40 xl:w-48 xl:h-48 rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_0_40px_-15px_rgba(14,165,233,0.3)] mt-4 md:mt-0 transition-transform duration-500 hover:scale-105">
+                    <img
+                        src="/profile.png"
+                        alt="Praveen Saraogi"
+                        className="w-full h-full object-cover block"
+                    />
+                </div>
             </div>
 
             <div className="mt-10 flex flex-wrap items-center gap-4">

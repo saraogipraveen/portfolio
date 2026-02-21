@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Zap, Clock, Code2 } from "lucide-react";
-import Image from "next/image";
 
 const quickFacts = [
     { label: "Experience", value: "8.5+ years" },
@@ -33,22 +32,11 @@ export function AboutPrinciples() {
             className="bento-card w-full h-full p-6 lg:p-8 flex flex-col justify-between gap-6"
         >
             <div>
-                <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center gap-3">
-                        <div className="h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.8)] animate-pulse" />
-                        <h2 className="font-[family-name:var(--font-fira-code)] text-xs uppercase tracking-widest text-zinc-400">
-                            Operation Status
-                        </h2>
-                    </div>
-                    <div className="h-12 w-12 rounded-full overflow-hidden border border-white/10 relative shrink-0">
-                        <Image
-                            src="/profile.png"
-                            alt="Praveen Saraogi"
-                            fill
-                            className="object-cover"
-                            sizes="48px"
-                        />
-                    </div>
+                <div className="flex items-center gap-3 mb-6">
+                    <div className="h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.8)] animate-pulse" />
+                    <h2 className="font-[family-name:var(--font-fira-code)] text-xs uppercase tracking-widest text-zinc-400">
+                        Operation Status
+                    </h2>
                 </div>
 
                 <div className="grid grid-cols-2 lg:grid-cols-1 xl:grid-cols-3 gap-3">
