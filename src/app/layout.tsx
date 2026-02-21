@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fira_Code, Space_Grotesk } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -29,6 +30,7 @@ export default function RootLayout({
         className={`${spaceGrotesk.variable} ${firaCode.variable} bg-[#05070a] text-zinc-100 antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
