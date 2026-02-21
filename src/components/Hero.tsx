@@ -59,10 +59,14 @@ export function Hero() {
                 <a
                     href="/praveen-saraogi-cv.pdf"
                     download="PraveenSaraogi_CV.pdf"
-                    className="group flex items-center gap-2 rounded-xl border border-sky-500/30 bg-sky-500/10 px-5 py-2.5 font-[family-name:var(--font-fira-code)] text-sm font-medium text-sky-400 transition-all hover:border-sky-400 hover:bg-sky-500/20 hover:scale-105 active:scale-95"
+                    className="relative group flex items-center gap-2 rounded-xl px-5 py-2.5 font-[family-name:var(--font-fira-code)] text-sm font-medium text-white transition-all hover:scale-105 active:scale-95 overflow-hidden"
                 >
-                    <FileText className="h-4 w-4" />
-                    Download CV
+                    <div className="absolute inset-0 bg-gradient-to-r from-sky-500 to-indigo-500 opacity-90 group-hover:opacity-100 transition-opacity" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-sky-400 to-indigo-400 opacity-0 group-hover:opacity-100 blur-xl transition-opacity" />
+                    <span className="relative z-10 flex items-center gap-2">
+                        <FileText className="h-4 w-4" />
+                        Download CV
+                    </span>
                 </a>
             </div>
         </motion.section>
