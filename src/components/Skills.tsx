@@ -27,11 +27,11 @@ export function Skills() {
                 </h2>
             </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
+            <div className="flex flex-wrap gap-3">
                 {skills.map((skill, i) => (
                     <div
                         key={skill.name}
-                        className="group relative overflow-hidden rounded-xl border border-white/5 bg-white/[0.02] p-4 transition-all hover:bg-white/[0.05] hover:border-indigo-500/30 flex flex-col gap-3"
+                        className="group relative overflow-hidden rounded-xl border border-white/5 bg-white/[0.02] px-4 py-2.5 transition-all hover:bg-white/[0.05] hover:border-indigo-500/30 flex items-center gap-3 shrink-0"
                     >
                         {/* Subtle background glow on hover */}
                         <div className="absolute inset-0 bg-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity blur-xl rounded-full" />
@@ -44,7 +44,7 @@ export function Skills() {
                         </div>
 
                         {/* Progress bar visual */}
-                        <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden relative z-10">
+                        <div className="w-16 h-1 bg-white/5 rounded-full overflow-hidden relative z-10 shrink-0">
                             <motion.div
                                 initial={{ width: 0 }}
                                 animate={{ width: `${skill.level}%` }}

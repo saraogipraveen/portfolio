@@ -15,18 +15,13 @@ export default function Home() {
           <Hero />
         </div>
 
-        {/* Top Right: Quick Facts/Principles */}
+        {/* Top Right: Quick Facts/Principles & Contact (Consolidated) */}
         <div className="lg:col-span-4 lg:row-span-2 flex">
           <AboutPrinciples />
         </div>
 
-        {/* Middle Right: Contact card */}
-        <div className="lg:col-span-4 lg:row-span-1 flex min-h-[250px]">
-          <Contact />
-        </div>
-
-        {/* Tech Stack / Skills under Hero */}
-        <div className="lg:col-span-8 lg:row-span-1 flex min-h-[200px]">
+        {/* Tech Stack / Skills under Hero (Compact) */}
+        <div className="lg:col-span-12 lg:row-span-1 flex min-h-[100px]">
           <Skills />
         </div>
 
