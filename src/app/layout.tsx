@@ -14,9 +14,33 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  title: "Praveen Saraogi | Senior UI Engineer",
+  metadataBase: new URL('https://praveen-saraogi.com'),
+  title: "Praveen Saraogi | Senior Frontend Engineer",
   description:
-    "Senior UI Engineer in Glasgow. Fast delivery, high quality, and end-to-end frontend ownership.",
+    "Senior Frontend Engineer specializing in React, Next.js, and high-performance enterprise applications. Based in Glasgow, UK.",
+  openGraph: {
+    title: "Praveen Saraogi | Senior Frontend Engineer",
+    description: "Senior Frontend Engineer specializing in React, Next.js, and high-performance enterprise applications.",
+    url: "https://praveen-saraogi.com", // Adjust as needed
+    siteName: "Praveen Saraogi Portfolio",
+    images: [
+      {
+        url: "/profile-photo.jpeg", // Using the updated profile photo
+        width: 800,
+        height: 600,
+        alt: "Praveen Saraogi Profile",
+      },
+    ],
+    locale: "en_GB",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Praveen Saraogi | Senior Frontend Engineer",
+    description: "Senior Frontend Engineer specializing in React, Next.js, and high-performance enterprise applications.",
+    creator: "@saraogipraveen",
+    images: ["/profile-photo.jpeg"],
+  },
 };
 
 export default function RootLayout({

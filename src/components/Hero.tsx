@@ -31,10 +31,13 @@ export function Hero() {
                 </div>
 
                 <div className="shrink-0 relative w-32 h-32 md:w-40 md:h-40 xl:w-48 xl:h-48 rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_0_40px_-15px_rgba(14,165,233,0.3)] mt-4 md:mt-0 transition-transform duration-500 hover:scale-105">
-                    <img
+                    <Image
                         src="/profile-photo.jpeg"
                         alt="Praveen Saraogi"
-                        className="w-full h-full object-cover block"
+                        fill
+                        sizes="(max-width: 768px) 128px, (max-width: 1280px) 160px, 192px"
+                        className="object-cover block"
+                        priority
                     />
                 </div>
             </div>
