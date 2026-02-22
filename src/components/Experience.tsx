@@ -117,8 +117,8 @@ export function Experience() {
                     </h2>
                 </div>
                 <div className="flex gap-2 lg:gap-3 items-center">
-                    <div className="px-3 py-1 rounded-full bg-white/5 border border-white/10 font-[family-name:var(--font-fira-code)] text-[10px] text-zinc-500 whitespace-nowrap">
-                        GLASGOW, UK
+                    <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 font-[family-name:var(--font-fira-code)] text-[10px] text-zinc-500 whitespace-nowrap">
+                        <span className="text-sm leading-none">🇬🇧</span> GLASGOW, UK
                     </div>
                     <div className="px-3 py-1 rounded-full bg-white/5 border border-white/10 font-[family-name:var(--font-fira-code)] text-[10px] text-zinc-500 whitespace-nowrap">
                         8.5+ YEARS EXP
