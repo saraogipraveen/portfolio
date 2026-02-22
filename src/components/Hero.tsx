@@ -2,11 +2,15 @@
 
 import { Mail, Briefcase, FileText, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export function Hero() {
     return (
-        <section
-            className="bento-card w-full h-full flex flex-col justify-center p-8 lg:p-12 opacity-0 animate-fade-in-up"
+        <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="bento-card w-full h-full flex flex-col justify-center p-8 lg:p-12 relative overflow-hidden"
         >
             <div className="flex-1 flex flex-col md:flex-row gap-8 lg:gap-12 items-start md:items-center">
                 <div className="flex-1 flex flex-col justify-center">
@@ -17,12 +21,11 @@ export function Hero() {
 
                     <h1 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl xl:text-6xl font-semibold leading-[1.1] text-zinc-100 tracking-tight">
                         Engineering modern web <br className="hidden md:block" />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400">experiences at scale</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500">experiences at scale</span>
                     </h1>
 
                     <p className="mt-6 max-w-xl text-base leading-relaxed text-zinc-400/90 sm:text-lg">
-                        I'm a Senior Frontend Engineer specializing in building complex, data-heavy applications.
-                        From architectural modernizations to optimizing CI/CD pipelines, I focus on end-to-end ownership and high-performance delivery.
+                        Architecting high-performance enterprise applications with a focus on end-to-end ownership and seamless user design.
                     </p>
                 </div>
 
@@ -41,7 +44,7 @@ export function Hero() {
             <div className="mt-10 flex flex-wrap items-center gap-4">
                 <a
                     href="mailto:saraogipraveenuk@gmail.com"
-                    className="group flex items-center gap-2 rounded-xl bg-zinc-100 px-5 py-2.5 font-[family-name:var(--font-fira-code)] text-sm font-medium text-zinc-900 transition-all hover:bg-white hover:scale-105 active:scale-95"
+                    className="group relative flex items-center gap-2 rounded-xl bg-white/90 backdrop-blur-sm px-5 py-2.5 font-[family-name:var(--font-space-grotesk)] text-sm font-medium text-black transition-all hover:bg-white hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:shadow-[0_0_25px_rgba(255,255,255,0.3)]"
                 >
                     Email Me
                     <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -68,6 +71,6 @@ export function Hero() {
                     </span>
                 </a>
             </div>
-        </section>
+        </motion.section>
     );
 }
