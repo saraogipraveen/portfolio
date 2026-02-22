@@ -2,10 +2,12 @@
 
 import { motion } from "framer-motion";
 import { Terminal, Calendar, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 const experience = [
     {
         company: "JP Morgan Chase & Co",
+        logo: "/logos/jpmorgan.jpeg",
         role: "SDE3 Frontend",
         period: "Jun 2022 - Present",
         location: "Glasgow, UK",
@@ -19,6 +21,7 @@ const experience = [
     },
     {
         company: "TELUS Digital AI Data Solutions",
+        logo: "/logos/telus.jpeg",
         role: "SDE2 Frontend",
         period: "Aug 2021 - May 2022",
         location: "Bangalore, IN",
@@ -31,6 +34,7 @@ const experience = [
     },
     {
         company: "Paytm",
+        logo: "/logos/paytm.png",
         role: "Software Engineer Frontend",
         period: "Sep 2020 - Aug 2021",
         location: "Mumbai, IN",
@@ -43,6 +47,7 @@ const experience = [
     },
     {
         company: "Quinnox Inc",
+        logo: "/logos/quinnox.jpeg",
         role: "Senior Software Engineer",
         period: "Jun 2020 - Sep 2020",
         location: "Bangalore, IN",
@@ -55,6 +60,7 @@ const experience = [
     },
     {
         company: "Bewakoof Brands Pvt Ltd",
+        logo: "/logos/bewakoof.jpeg",
         role: "Software Engineer Frontend",
         period: "Apr 2019 - May 2020",
         location: "Mumbai, IN",
@@ -66,6 +72,7 @@ const experience = [
     },
     {
         company: "Infosys Ltd",
+        logo: "/logos/infosys.jpeg",
         role: "Software Engineer",
         period: "Dec 2017 - Mar 2019",
         location: "Mysore / Bangalore / Pune, IN",
@@ -78,6 +85,7 @@ const experience = [
     },
     {
         company: "Centillion: Amexs",
+        logo: "/logos/centillion.png",
         role: "Software Developer",
         period: "May 2017 - Dec 2017",
         location: "Navi Mumbai, IN",
@@ -141,13 +149,18 @@ export function Experience() {
                             </span>
                         </div>
 
-                        <div className="relative">
-                            <h3 className="font-[family-name:var(--font-space-grotesk)] text-xl font-medium text-zinc-100 group-hover:text-white transition-colors mb-2">
-                                {entry.company}
-                            </h3>
-                            <p className="font-[family-name:var(--font-fira-code)] text-xs text-zinc-400 mb-6 flex items-center gap-2">
-                                {entry.role}
-                            </p>
+                        <div className="flex items-center gap-4 mb-6 relative">
+                            <div className="relative w-14 h-14 rounded-2xl overflow-hidden bg-white/[0.03] border border-white/10 shrink-0 shadow-[0_0_15px_rgba(255,255,255,0.03)] group-hover:shadow-[0_0_20px_rgba(255,255,255,0.08)] group-hover:border-white/20 transition-all flex items-center justify-center p-2">
+                                <Image src={entry.logo} alt={entry.company} fill sizes="56px" className="object-contain p-2" />
+                            </div>
+                            <div>
+                                <h3 className="font-[family-name:var(--font-space-grotesk)] text-lg md:text-xl font-medium text-zinc-100 group-hover:text-white transition-colors mb-1.5 leading-tight">
+                                    {entry.company}
+                                </h3>
+                                <p className="font-[family-name:var(--font-fira-code)] text-[11px] text-zinc-400">
+                                    {entry.role}
+                                </p>
+                            </div>
                         </div>
 
                         {/* Scrollable Description Container */}
