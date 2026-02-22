@@ -1,0 +1,12 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="256" height="256" rx="60" fill="#09090b"/>
+  <rect x="12" y="12" width="232" height="232" rx="48" stroke="url(#paint0_linear)" stroke-width="8"/>
+  <text x="50%" y="54%" font-family="system-ui, -apple-system, sans-serif" font-size="120" font-weight="900" fill="#f4f4f5" letter-spacing="-4" text-anchor="middle" dominant-baseline="middle">PS</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38bdf8"/>
+      <stop offset="0.5" stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#c084fc"/>
+    </linearGradient>
+  </defs>
+</svg>
