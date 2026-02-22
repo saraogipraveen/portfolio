@@ -22,7 +22,7 @@ export function Skills() {
             className="bento-card w-full h-full p-6 lg:p-8 flex flex-col justify-between"
         >
             <div className="flex items-center gap-3 mb-6">
-                <div className="h-2 w-2 rounded-full bg-indigo-500 shadow-[0_0_10px_rgba(99,102,241,0.8)]" />
+                <div className="h-2 w-2 rounded-full bg-fuchsia-500 shadow-[0_0_15px_rgba(217,70,239,0.8)]" />
                 <h2 className="font-[family-name:var(--font-fira-code)] text-xs uppercase tracking-widest text-zinc-400">
                     Tech Arsenal
                 </h2>
@@ -32,12 +32,12 @@ export function Skills() {
                 {skills.map((skill, i) => (
                     <div
                         key={skill.name}
-                        className="group relative overflow-hidden rounded-xl border border-white/5 bg-white/[0.02] px-4 py-2.5 transition-all hover:bg-white/[0.05] hover:border-indigo-500/30 flex items-center gap-3 shrink-0"
+                        className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-md px-4 py-2.5 transition-all duration-300 hover:bg-white/[0.08] hover:border-indigo-400/50 hover:shadow-[0_0_20px_rgba(129,140,248,0.2)] flex items-center gap-3 shrink-0"
                     >
                         {/* Subtle background glow on hover */}
-                        <div className="absolute inset-0 bg-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity blur-xl rounded-full" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-fuchsia-500/10 opacity-0 group-hover:opacity-100 transition-opacity blur-xl rounded-full" />
 
-                        <div className="flex items-center gap-2 text-zinc-400 group-hover:text-indigo-400 transition-colors relative z-10">
+                        <div className="flex items-center gap-2 text-zinc-400 group-hover:text-indigo-300 transition-colors relative z-10">
                             {skill.icon}
                             <span className="font-[family-name:var(--font-fira-code)] text-xs font-medium">
                                 {skill.name}

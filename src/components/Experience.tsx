@@ -101,8 +101,8 @@ export function Experience() {
         >
             <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-sky-500/10 border border-sky-500/20">
-                        <Terminal className="h-4 w-4 text-sky-400" />
+                    <div className="p-2 rounded-lg bg-indigo-500/20 border border-indigo-500/40 shadow-[0_0_15px_rgba(99,102,241,0.4)]">
+                        <Terminal className="h-4 w-4 text-indigo-400" />
                     </div>
                     <h2 className="font-[family-name:var(--font-fira-code)] text-sm uppercase tracking-widest text-zinc-300">
                         Career Trajectory
@@ -126,13 +126,13 @@ export function Experience() {
                 {experience.map((entry, i) => (
                     <div
                         key={entry.company}
-                        className="snap-start shrink-0 w-[300px] md:w-[350px] lg:w-[420px] rounded-2xl flex flex-col border border-white/5 bg-black/40 p-6 hover:bg-white/[0.03] hover:border-white/10 transition-all group relative overflow-hidden"
+                        className="snap-start shrink-0 w-[300px] md:w-[350px] lg:w-[420px] rounded-2xl flex flex-col border border-white/10 bg-white/[0.02] backdrop-blur-xl p-6 hover:bg-white/[0.05] hover:border-indigo-500/40 transition-all duration-300 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)] group relative overflow-hidden"
                     >
                         {/* Background subtle gradient */}
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-sky-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 group-hover:bg-sky-500/10 transition-colors" />
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 group-hover:bg-fuchsia-500/20 transition-colors duration-500" />
 
                         <div className="flex justify-between items-start mb-6 relative">
-                            <span className="font-[family-name:var(--font-fira-code)] text-[10px] text-sky-400/80 bg-sky-500/10 px-2.5 py-1 rounded">
+                            <span className="font-[family-name:var(--font-fira-code)] text-[10px] text-indigo-300 bg-indigo-500/20 shadow-[0_0_10px_rgba(99,102,241,0.3)] px-2.5 py-1 rounded">
                                 {String(i + 1).padStart(2, '0')}
                             </span>
                             <span className="flex items-center gap-1.5 font-[family-name:var(--font-fira-code)] text-[10px] text-zinc-500">
