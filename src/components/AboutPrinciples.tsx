@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Youtube, ExternalLink } from "lucide-react";
 
 const links = [
@@ -32,11 +31,9 @@ const links = [
 
 export function AboutPrinciples() {
     return (
-        <motion.section
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="bento-card w-full h-full p-6 lg:p-8 flex flex-col justify-between gap-6"
+        <section
+            className="bento-card w-full h-full p-6 lg:p-8 flex flex-col justify-between gap-6 opacity-0 animate-fade-in-up"
+            style={{ animationDelay: '200ms' }}
         >
             <div>
                 <div className="flex items-center gap-3 mb-6">
@@ -90,6 +87,6 @@ export function AboutPrinciples() {
                     ))}
                 </div>
             </div>
-        </motion.section>
+        </section>
     );
 }

@@ -94,7 +94,8 @@ export function Experience() {
     return (
         <motion.section
             initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="bento-card w-full h-full p-6 lg:p-8 flex flex-col"
         >
