@@ -51,4 +51,21 @@
   .bento-card:hover::before {
     @apply opacity-50;
   }
+
+  /* Native CSS Animations for critical LCP elements */
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(10px) scale(0.95);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.5s ease-out forwards;
+  }
 }

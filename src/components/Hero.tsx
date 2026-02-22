@@ -1,16 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Mail, Briefcase, FileText, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
 export function Hero() {
     return (
-        <motion.section
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="bento-card w-full h-full flex flex-col justify-center p-8 lg:p-12"
+        <section
+            className="bento-card w-full h-full flex flex-col justify-center p-8 lg:p-12 opacity-0 animate-fade-in-up"
         >
             <div className="flex-1 flex flex-col md:flex-row gap-8 lg:gap-12 items-start md:items-center">
                 <div className="flex-1 flex flex-col justify-center">
@@ -72,6 +68,6 @@ export function Hero() {
                     </span>
                 </a>
             </div>
-        </motion.section>
+        </section>
     );
 }
